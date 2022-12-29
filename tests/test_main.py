@@ -8,7 +8,7 @@ nums_type = [15, True, 'str', 5, None, 2.2]
 nums_same = [13, 13, 13, 13, 13, 13]
 nums_not = '1, 2, 3, 5, 8, 13, 21, 34, 55, 89'
 
-class MainTest(unittest.TestCase, Int_nums):
+class MainTest(unittest.TestCase):
     is_ok = Int_nums(nums_ok)
     is_big = Int_nums(nums_big)
     is_empty = Int_nums(nums_empty)
