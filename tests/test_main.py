@@ -11,15 +11,16 @@ nums_not = '1, 2, 3, 5, 8, 13, 21, 34, 55, 89'
 class MainTest(unittest.TestCase):
     is_ok = Int_nums(nums_ok)
     is_big = Int_nums(nums_big)
-    is_empty = Int_nums(nums_empty)
-    is_not_type = Int_nums(nums_type)
     is_same = Int_nums(nums_same)
-    is_not = Int_nums(nums_not)
-
+    
     def test_validate(self):
-        self.assertFalse(self.is_empty.validate())
-        self.assertFalse(self.is_not_type.validate())
-        self.assertFalse(self.is_not.validate())
+        is_empty = Int_nums(nums_empty)
+        is_not_type = Int_nums(nums_type)
+        is_not = Int_nums(nums_not)
+
+        self.assertFalse(is_empty.validate())
+        self.assertFalse(is_not_type.validate())
+        self.assertFalse(is_not.validate())
 
         self.assertTrue(self.is_ok.validate())
         self.assertTrue(self.is_big.validate())
